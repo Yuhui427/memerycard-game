@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+
+    <link href="https://cdn.bootcss.com/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <title>Memory Game</title>
+    <link rel="stylesheet" href="style.css"></link>
+
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="start-wrapper">
+
+            <div class="form-wrapper">
+                <h1 style="text-align: center;margin-bottom: 20px;" class="text-info">Memory game</h1>
+                <form class="form-horizontal" id="start-form">
+                    <div class="form-group">
+                        <label for="Name" class="col-sm-2 control-label">Your Name</label>
+                        <div class="col-sm-10">
+                            <input type="email" class="form-control" name="name" id="Name" placeholder="" value="">
+                        </div>
+
+                    </div>
+                    <div class="form-group">
+                        <label for="Category" class="col-sm-2 control-label">Category</label>
+                        <div class="col-sm-10">
+
+                            <ul>
+                                <li id="x1">
+                                    <!-- <input type="checkbox" id="cb1" name="page1" />
+                                  <label for="cb1"><img src="https://picsum.photos/seed/1/100" /></label> -->
+                                </li>
+                                <li id="x2">
+                                    <!-- <input type="checkbox" id="cb2" name="page1" />
+                                  <label for="cb2"><img src="https://picsum.photos/seed/2/100" /></label> -->
+                                </li>
+                                <li id="x3">
+                                    <!-- <input type="checkbox" id="cb3" name="page1" />
+                                  <label for="cb3"><img src="https://picsum.photos/seed/3/100" /></label> -->
+                                </li>
+                                <li id="x4">
+                                    <!-- <input type="checkbox" id="cb4" name="page1" />
+                                  <label for="cb4"><img src="https://picsum.photos/seed/4/100" /></label> -->
+                                </li>
+                                <li id="x5">
+                                    <!-- <input type="checkbox" id="cb5" name="page1" />
+                                  <label for="cb5"><img src="https://picsum.photos/seed/1/100" /></label> -->
+                                </li>
+                                <li id="x6">
+                                    <!-- <input type="checkbox" id="cb6" name="page1" />
+                                  <label for="cb6"><img src="https://picsum.photos/seed/2/100" /></label> -->
+                                </li>
+                                <li id="x7">
+                                    <!-- <input type="checkbox" id="cb7" name="page1" />
+                                  <label for="cb7"><img src="https://picsum.photos/seed/3/100" /></label> -->
+                                </li>
+                                <li id="x8">
+                                    <!-- <input type="checkbox" id="cb8" name="page1" />
+                                  <label for="cb8"><img src="https://picsum.photos/seed/4/100" /></label> -->
+                                </li>
+                                <li id="x9">
+                                    <!-- <input type="checkbox" id="cb9" name="page1" />
+                                  <label for="cb9"><img src="https://picsum.photos/seed/3/100" /></label> -->
+                                </li>
+                                <li id="x10">
+                                    <!-- <input type="checkbox" id="cb10" name="page1" />
+                                  <label for="cb10"><img src="https://picsum.photos/seed/4/100" /></label> -->
+                                </li>
+                            </ul>
+                            <button type="button" id='preButton' style="float:left;" onclick="preFt()">pre</button>
+                            <button type="button" id='nextButton' style="float:right;" onclick="nextFt()">next</button>
+
+                        </div>
+                        <div class="col-sm-10">
+                            <br>
+                            <input type="text" disabled id='breedChose' style="float:left; width: 1100px; " value='You have chose: '>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="Difficulty" class="col-sm-2 control-label">Difficulty</label>
+                        <div class="col-sm-10">
+                            <select name="category" class="form-control" id="selectLevel">
+                              <option value="easy">Easy</option>
+                              <option value="medium">Medium</option>
+                              <option value="hard">Hard</option>
+                          </select>
+                        </div>
+                    </div>
+
+                </form>
+                <div style="text-align: center;">
+
+                    <button class="btn btn-primary btn-lg" style="width: 200px;" id="start-btn" onclick="gameStart()">start</button>
+                </div>
+            </div>
+            <div class="top10-wrapper">
+                <b>L E A D E R B O A R D</b><br><br>
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>Number</th>
+                            <th>Name</th>
+                            <th>Score</th>
+                            <th>Difficulty</th>
+                        </tr>
+                    </thead>
+                    <tbody class="top10" style="text-align: left;">
+ 
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="main-game" style="display: none;">
+            <div class="counter-wrapper">
+                <div class="counter"></div>
+                Time Left: <span class="time-left"></span>s <br>
+                <div class="score-wrapper">
+
+                    score: <span class="score" id="score">0</span>
+                </div> <br> <br>
+            </div>
+
+            <div class="qList">
+
+                <div>
+
+                    <button class="btn btn-warning" id="btn_quit" onclick="quit()">Quit</button>
+                </div>
+                <br>
+                <br>
+                <div class="grid" id="grid"></div>
+            </div>
+            <div class="oper">
+            </div>
+        </div>
+    </div>
+    <!-- <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script> -->
+    <script src="https://cdn.bootcss.com/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="app-test2.js" charset="utf-8"></script>
+</body>
+
+</html>
